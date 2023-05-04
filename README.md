@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
 
  Utililiza o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
