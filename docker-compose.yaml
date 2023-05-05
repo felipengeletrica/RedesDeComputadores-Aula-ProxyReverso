@@ -25,7 +25,7 @@ services:
             - "./acme.json:/acme.json"
       labels:
             # Dashboard
-            - "traefik.http.routers.traefik.rule=Host(`dashboard.localhost`)"
+            - "traefik.http.routers.traefik.rule=Host(`Dyogo_grafana.localhost`)"
             - "traefik.http.routers.traefik.service=api@internal"
             - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
             - "traefik.http.routers.traefik.entrypoints=websecure"
@@ -43,7 +43,7 @@ services:
       - ./app:/app
     
     labels:
-       - traefik.http.routers.apache.rule=Host(`apache.localhost`)
+       - traefik.http.routers.apache.rule=Host(`Dyogo_grafana.localhost`)
        - traefik.http.routers.apache.tls=true
        - traefik.http.routers.apache.tls.certresolver=letsencryp
        - traefik.port=8080
