@@ -13,47 +13,63 @@
 
 
 
-# Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
+# Projeto PROXY reverso  (Exercicio troca de subdominio)
 
- Utililiza o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
-    
-Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
+## 1° Passo:
+
+Abrir o docker-compose.yaml como ediçao de texto e alterar dentro da tag "LABEL" os subdominios node fazem referência ao HOST:
+
+
+![Testando o Apache](doc/dockercompose_subdominios.png) 
+
  ***
 
- ## Implantação dos serviços
- Abrir o terminal e execute os seguintes comandos:
-
-Construindo e excutando os serviços (pressione ctrl+c para cencelar):
+ ## 2° Passo:
+ Abrir o terminal e inserir o comando para iniciar os serviços:
 
  > $ docker-compose up --build
 
- Utilize -d para dar um "detach" rodar o serviço na máquina
+ Caso necessite ou queira parar o serviço:
 
-> $ docker-compose up --build -d
-
-Parando serviços: 
 > $ docker-compose stop
 
-Removendo serviços: 
+ Caso necessite ou queira remover o serviço:
 > $ docker-compose rm
 ***
 
- ## Testando os serviços
+ ## 3° Passo:
 
-Utilize o navegador web e digite a seguinte url:
+Utilize o navegador web e digite as seguintes urlscom os subdominios que foram alterados:
 
-> http://apache.localhost
+> http://ricardolangbecker_apache1.localhost
 
- ![Testando o Apache](doc/apache.png) 
+![Verificando o Apache](doc/subdominio_ricado.png) 
 
- > http://grafana.localhost
 
- ![Testando o Grafana](doc/grafana.png) 
 
-  > http://dashboard.localhost
+ > http://ricardolangbecker_grafana.localhost
 
- ![Testando o DocuWiki](doc/DocuWiki.png) 
 
-  > http://dashboard.localhost
+ ![Verificando o Grafana](doc/grafana.png) 
 
- ![Testando o Traefik](doc/dashboard.png) 
+
+  > http://ricardolangbecker_dashboard.localhost
+
+
+
+ ![Verificando o DocuWiki](doc/DocuWiki.png) 
+
+
+
+  > http://ricardolangbecker_dashboard.localhost
+
+
+
+ ![Verificando o Traefik](doc/traefik.png) 
+
+
+
+### E verificando dentro do Routers do Traefikk, podemos ver nosso subdominio:
+
+
+ ![Verificando o Traefik](doc/dashboard_traefik2.png) 
