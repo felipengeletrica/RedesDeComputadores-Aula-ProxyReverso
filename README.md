@@ -1,59 +1,72 @@
 
+# Projeto PROXY reverso
+
+## 1° Etapa:
+
+Alterar os subdominíos:
+
+## 1° Passo:
+![Alterando o subdominio do DashBoard](RedesDeComputadores-Aula-ProxyReverso/SubDominio-Dashboard)
+
+## 2° Passo:
+
+![Alterando o subdominio do Apache](RedesDeComputadores-Aula-ProxyReverso/SubDominio-Apache)
+
+## 3° Passo:
+
+![Alterando o subdominio do Apache1](RedesDeComputadores-Aula-ProxyReverso/SubDominio-Apache1)
+
+## 4° Passo:
+
+![Alterando o subdominio do Grafana](RedesDeComputadores-Aula-ProxyReverso/SubDominio-Grafana)
+
+## 5° Passo:
+
+![Alterando o subdominio do Dokuwiki](RedesDeComputadores-Aula-ProxyReverso/SubDominio-Dokuwiki)
 
 
 
+## 2° Etapa:
+
+Buildar o docker-compose:
+
+## 1° Passo:
+
+Instalar o docker compose utilizando o comando:
+
+$ sudo apt install docker-compose
+
+Comando para buildar o docker compose:
+
+$ docker-compose --build
+
+Comando para encerrar a build:
+
+$ docker-compose stop:
+
+Comando para remover a build:
+
+$ docker-compose rm
+
+![Buildando o docker compose](RedesDeComputadores-Aula-ProxyReverso/Passo1)
+
+## Passo de verificação:
+
+Links para verificar se o subdominio está funcionando:
+
+>  http://raul_dashboard.localhost
+
+> http://raul_apache.localhost
+
+> http://raul_apache1.localhost
+
+> http://raul_grafana.localhost
+
+>  http://raul_dokuwiki.localhost
+
+## 3° Etapa:
+
+Identificar os subdominios alterados:
 
 
-
-
-
-
-
-
-
-
-
-# Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
-
- Utililiza o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
-    
-Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
- ***
-
- ## Implantação dos serviços
- Abrir o terminal e execute os seguintes comandos:
-
-Construindo e excutando os serviços (pressione ctrl+c para cencelar):
-
- > $ docker-compose up --build
-
- Utilize -d para dar um "detach" rodar o serviço na máquina
-
-> $ docker-compose up --build -d
-
-Parando serviços: 
-> $ docker-compose stop
-
-Removendo serviços: 
-> $ docker-compose rm
-***
-
- ## Testando os serviços
-
-Utilize o navegador web e digite a seguinte url:
-
-> http://apache.localhost
-
- ![Testando o Apache](doc/apache.png) 
-
- > http://grafana.localhost
-
- ![Testando o Grafana](doc/grafana.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o DocuWiki](doc/DocuWiki.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o Traefik](doc/dashboard.png) 
+![Identificando os subdominios alterados](RedesDeComputadores-Aula-ProxyReverso/SubDominios-Alterados)
