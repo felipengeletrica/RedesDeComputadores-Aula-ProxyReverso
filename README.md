@@ -7,7 +7,7 @@
 
  ## Usando o Docker   
     Para executar os comandos utilize o comando "sudo" na frente
-    
+
 Rode o Docker usando o comando(para cancelar CTRL + C):
 
 > $ docker-compose up --build
@@ -75,3 +75,6 @@ Podemos ver os subdominios, as rotas e portas usando o site do DashBoard
 Lá na parte superior, mudando para http podemos ver todas as rotas
 
 ![Rotas](doc/Dominio.png)
+
+## Removendo vulnerabilidade
+Removemos a possibilidade de entrar utilizando o ip, fazendo ser obrigado a entrar com o dominio, e impossilitando entrar com o ip. Para fazer isso se remove as portas expostas de quase todas as tags menos do traefik e assim isolando ela.
