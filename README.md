@@ -6,6 +6,8 @@
 ![Mudando o endereço](doc/Apache_edicao.png)
 
  ## Usando o Docker   
+    Para executar os comandos utilize o comando "sudo" na frente
+    
 Rode o Docker usando o comando(para cancelar CTRL + C):
 
 > $ docker-compose up --build
