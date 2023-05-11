@@ -61,5 +61,6 @@ Utilize o navegador web e digite a seguinte url:
  ## Remover Acesso IP
 
  Remover o acesso via IP obrigando o acesso através do domínio.
-Apague as portas e tag web de todos os serviços, esceto traefik.
+Apague as portas e tag web de todos os serviços, exceto traefik.
 
+![Rmover acesso IP](doc/Acesso_IP.png)
