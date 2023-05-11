@@ -1,44 +1,34 @@
-# Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
+1° Passo:
+Abrir o docker-compose.yaml como ediçao de texto e alterar dentro da tag "LABEL" os subdominios onde fazem referência ao HOST: 
 
- Utililiza o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
-    
-Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
- ***
+![](images/Abrindo-o-docker-compose.yaml.png)
 
- ## Implantação dos serviços
- Abrir o terminal e execute os seguintes comandos:
 
-Construindo e excutando os serviços (pressione ctrl+c para cencelar):
+2° Passo:
+Abrir o terminal e inserir o comando para iniciar os serviços:
 
- > $ docker-compose up --build
+$ docker-compose up --build
 
- Utilize -d para dar um "detach" rodar o serviço na máquina
+Caso necessite ou queira parar o serviço:
 
-> $ docker-compose up --build -d
+$ docker-compose stop
 
-Parando serviços: 
-> $ docker-compose stop
+Caso necessite ou queira remover o serviço:
 
-Removendo serviços: 
-> $ docker-compose rm
-***
+$ docker-compose rm
 
- ## Testando os serviços
 
-Utilize o navegador web e digite a seguinte url:
+3° Passo:
+Utilize o navegador web e digite as seguintes urlscom os subdominios que foram alterados:
 
-> http://apache.localhost
 
- ![Testando o Apache](doc/apache.png) 
+![http://Dyogo_apache1.localhost](images/Apache.png)
 
- > http://grafana.localhost
+![http://Dyogo_grafana.localhost](images/Grafana.png)
+![http://Dyogo_dashboard.localhost](images/DashBoard.png)
+![http://Dyogo_dokuwiki.localhost](images/Dokuwiki.png)
+![http://Dyogo.localhost](images/dash.png)
 
- ![Testando o Grafana](doc/grafana.png) 
+E verificando dentro do Routers do Traefikk, podemos ver nosso subdominio:
 
-  > http://dashboard.localhost
-
- ![Testando o DocuWiki](doc/DocuWiki.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o Traefik](doc/dashboard.png) 
+![](images/dominios.png)
