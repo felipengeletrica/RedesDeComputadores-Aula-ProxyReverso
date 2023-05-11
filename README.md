@@ -56,7 +56,7 @@ Utilize o navegador web e digite a seguinte url:
 
   > http://joaogabriel_dashboard.localhost
 
- ![Testando o DocuWiki e Traefik](doc/DocuWiki-Traefik.png)
+ ![Testando o DocuWiki e Traefik](doc/DocWiki-Traefik.png)
 
  ## Remover Acesso IP
 
