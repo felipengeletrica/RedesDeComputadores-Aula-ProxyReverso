@@ -77,4 +77,4 @@ Lá na parte superior, mudando para http podemos ver todas as rotas
 ![Rotas](doc/Dominio.png)
 
 ## Removendo vulnerabilidade
-Removemos a possibilidade de entrar utilizando o ip, fazendo ser obrigado a entrar com o dominio, e impossilitando entrar com o ip. Para fazer isso se remove as portas expostas de quase todas as tags menos do traefik e assim isolando ela.
+Removemos a possibilidade de entrar utilizando o ip, fazendo ser obrigado a entrar com o dominio, e impossilitando entrar com o ip. Para fazer isso se remove as portas expostas e a network WEB de quase todas as tags, menos do traefik, assim isolando ela.
