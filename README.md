@@ -1,44 +1,75 @@
-# Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
+## Mudando o subdominio
 
- Utililiza o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
+    Mudar o endereço mudando o host que fica dentro de "Label", mudando assim o subdominio
     
-Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
- ***
+### Exemplo:
+![Mudando o endereço](/RedesDeComputadores-Aula-ProxyReverso/doc/Apache_edicao.png)
 
- ## Implantação dos serviços
- Abrir o terminal e execute os seguintes comandos:
+ ## Usando o Docker   
+Rode o Docker usando o comando(para cancelar CTRL + C):
 
-Construindo e excutando os serviços (pressione ctrl+c para cencelar):
+> $ docker-compose up --build
 
- > $ docker-compose up --build
+Se não rodar, pode ser que não tenha um docker construido, o comando para consertar se encontra no erro.
 
- Utilize -d para dar um "detach" rodar o serviço na máquina
+Se a porta já estiver em uso, desinstale o apache2 usando o comando:
 
-> $ docker-compose up --build -d
+> $ sudo apt remove apache2
 
-Parando serviços: 
+![Removendo Apache](/RedesDeComputadores-Aula-ProxyReverso/doc/RemoverApache.png)
+
+ Quando fizer tudo, deve rodar e exibir a seguinte tela:
+
+    
+![Done](/RedesDeComputadores-Aula-ProxyReverso/doc/Done.png)
+
+Se quiser parar o serviço utilize:
+
 > $ docker-compose stop
 
-Removendo serviços: 
+ou se quiser remover utilize o comando:
+
 > $ docker-compose rm
-***
 
- ## Testando os serviços
 
-Utilize o navegador web e digite a seguinte url:
+## Testando
 
-> http://apache.localhost
+    Quando mudar o dominio lembrar de mudar o endereço
+### Exemplo:
+![Exemplo Endereco](/RedesDeComputadores-Aula-ProxyReverso/doc/Endereco.png)
 
- ![Testando o Apache](doc/apache.png) 
+Pelo navegador podemos acessar o endereço
 
- > http://grafana.localhost
+>http://apache.localhost
 
- ![Testando o Grafana](doc/grafana.png) 
+    Pode aparecer uma tela de aviso de segurança, só clicar em avançar
 
-  > http://dashboard.localhost
+Se estiver rodando, deve aparecer uma tela com a palavra it works
 
- ![Testando o DocuWiki](doc/DocuWiki.png) 
+![It works](/RedesDeComputadores-Aula-ProxyReverso/doc/ItWorks.png)
 
-  > http://dashboard.localhost
+    Caso não funcione aparecerá uma tela de erro 404
 
- ![Testando o Traefik](doc/dashboard.png) 
+Para testar o grafana, se utiliza o seguinte link
+
+>http://grafana.localhost
+
+e assim aparecerá essa tela
+
+![Tela Grafana](/RedesDeComputadores-Aula-ProxyReverso/doc/Grafana.png)
+
+Fazendo o login entramos nele
+![Tela Dentro do Grafana](/RedesDeComputadores-Aula-ProxyReverso/doc/DentroGrafana.png)
+
+Podemos ver os subdominios, as rotas e portas usando o site do DashBoard
+
+>http://dashboard.localhost
+
+![Tela DashBoard](/RedesDeComputadores-Aula-ProxyReverso/doc/TelaDashBoard.png)
+
+    O 80 representa o HTTP e o 443 o HTTPS
+    Os gŕaficos mostram que tem 6 rotas e 8 serviços e 1 middleware
+
+Lá na parte superior, mudando para http podemos ver todas as rotas
+
+![Rotas](/RedesDeComputadores-Aula-ProxyReverso/doc/Dominio.png)
