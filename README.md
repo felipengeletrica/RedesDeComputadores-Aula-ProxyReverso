@@ -17,7 +17,7 @@
 
 ## 1° Passo:
 
-Abrir o docker-compose.yaml como ediçao de texto e alterar dentro da tag "LABEL" os subdominios node fazem referência ao HOST:
+Abrir o docker-compose.yaml como ediçao de texto e alterar dentro da tag "LABEL" os subdominios onde fazem referência ao HOST:
 
 
 ![Testando o Apache](doc/dockercompose_subdominios.png) 
